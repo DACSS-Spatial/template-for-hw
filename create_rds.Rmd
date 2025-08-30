@@ -12,8 +12,8 @@ Paste links from GitHub here:
 ```{r}
 # paste inside the quotations
 
-gpklink=''
-jsonlink=''
+gpklink='https://github.com/DACSS-Spatial/template-for-hw/raw/refs/heads/main/MapFromPython1.gpkg'
+jsonlink='https://github.com/DACSS-Spatial/template-for-hw/raw/refs/heads/main/MapFromPython2.geojson'
 ```
 
 Have the maps into R
@@ -28,7 +28,9 @@ See and save plots:
 
 ```{r}
 library(ggplot2)
-map1gg=ggplot() + theme_bw() + geom_sf(data = map1,fill='red', color='grey90')
+map1gg=ggplot() + theme_bw() + geom_sf(data = map1,
+                                       fill='red',
+                                       color='grey90')
 map1gg
 
 saveRDS(map1gg,file='map1.rds')
